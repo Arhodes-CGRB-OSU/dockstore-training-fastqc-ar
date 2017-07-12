@@ -12,7 +12,7 @@ dct:creator:
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "green_slime:latest"
+    dockerPull: "purple_goo:latest"
 
 hints:
   - class: ResourceRequirement
