@@ -10,10 +10,10 @@ RUN apt-get -m update && apt-get install -y wget unzip zip perl-doc
 # get the tool and install it in /usr/local/bin
 RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5_source.zip
 
-RUN unzip fastqc_v0.11.5_source.zip && \
-#    rm fastqc_v0.11.5_source.zip && \
-#    mv fastqc_v0.11.5_source.zip /opt/
-COPY bin/fastqc /usr/local/bin
+RUN unzip fastqc_v0.11.5_source.zip && 
+RUN    rm fastqc_v0.11.5_source.zip && 
+RUN    mv fastqc_v0.11.5_source.zip /opt/
+RUN cp bin/fastqc /usr/local/bin
 RUN chmod a+x /usr/local/bin/fastqc
 
 # switch back to the ubuntu user so this tool (and the files written) are not owned
