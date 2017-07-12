@@ -5,7 +5,7 @@ MAINTAINER Adelaide Rhodes <adelaide.rhodes@gmail.com>
 # Setup packages
 USER root
 
-RUN apt-get -m update && apt-get install -y wget unzip openjdk-7-jre zip perl-doc
+RUN apt-get -m update && apt-get install -y wget unzip zip perl-doc
 
 # get the tool and install it in /usr/local/bin
 RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5_source.zip
