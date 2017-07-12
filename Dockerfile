@@ -11,8 +11,8 @@ RUN apt-get -m update && apt-get install -y wget unzip zip perl-doc
 RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5_source.zip
 
 RUN unzip fastqc_v0.11.5_source.zip && \
-    rm fastqc_v0.11.5_source.zip && \
-    mv fastqc_v0.11.5_source.zip /opt/
+#    rm fastqc_v0.11.5_source.zip && \
+#    mv fastqc_v0.11.5_source.zip /opt/
 COPY bin/fastqc /usr/local/bin
 RUN chmod a+x /usr/local/bin/fastqc
 
