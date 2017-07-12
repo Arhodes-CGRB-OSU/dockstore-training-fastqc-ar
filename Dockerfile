@@ -22,8 +22,8 @@ RUN curl -SL ${FASTQC_PATH}/${FASTQC_ZIP} -o /tmp/${FASTQC_ZIP} \
     && ln -s ${FASTQC_DEST}/FastQC/fastqc /usr/local/bin/fastqc \
     && rm -rf /tmp/${FASTQC_ZIP}
 
-COPY run-fastqc /usr/local/bin
-RUN chmod a+x /usr/local/bin/run-fastqc
+#COPY run-fastqc /usr/local/bin
+#RUN chmod a+x /usr/local/bin/fastqc
 
 # switch back to the ubuntu user so this tool (and the files written) are not owned by root
 RUN groupadd -r -g 1000 ubuntu && useradd -r -g ubuntu -u 1000 -m ubuntu
