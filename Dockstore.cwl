@@ -1,5 +1,5 @@
 class: CommandLineTool
-id: "fastqc"
+id: "fastqc-ar"
 label: "Fastqc v0.11.4"
 
 cwlVersion: v1.0
