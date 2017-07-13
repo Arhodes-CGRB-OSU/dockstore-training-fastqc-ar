@@ -11,7 +11,8 @@ cwlVersion: v1.0
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "https://quay.io/repository/arhodes_cgrb_osu/dockstore-training-fastqc-ar"
+  dockerPull: "purple_goo"  
+#   dockerPull: "https://quay.io/repository/arhodes_cgrb_osu/dockstore-training-fastqc-ar"
 
 hints:
   - class: ResourceRequirement
