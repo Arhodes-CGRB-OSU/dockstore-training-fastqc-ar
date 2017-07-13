@@ -24,4 +24,4 @@ RUN cd /usr/local && \
 
 #ENTRYPOINT ["fastqc"]
 
-ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["/bin/bash"]
