@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install --yes \
     default-jre \
     unzip \
     perl-doc \
-#    perl \
+    perl 
 #    docker
 
 # Download FastQC
