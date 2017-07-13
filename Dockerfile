@@ -7,10 +7,10 @@ MAINTAINER Adelaide Rhodes <adelaide.rhodes@gmail.com>
 # Install OpenJDK 7 JRE
 RUN apt-get update && apt-get install --yes \
     default-jre \
-    perl \
     unzip \
     perl-doc \
-    docker
+#    perl \
+#    docker
 
 # Download FastQC
 ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/
