@@ -34,9 +34,7 @@ inputs:
 baseCommand: [ fastqc, "--outdir", .]
 
 outputs:
-    type:
-      type: array
-      items: File
+    type: File
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
