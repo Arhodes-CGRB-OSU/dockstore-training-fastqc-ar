@@ -33,13 +33,7 @@ inputs:
       prefix: --threads
 
 outputs:
-  zippedFile:
+  htmlFile:
     type: File
     outputBinding:
-      glob: '*.zip'
-  report:
-    type: Directory
-    outputBinding:
-      glob: .
-
-baseCommand: [fastqc, --outdir, ., --extract]
+      glob: '*.html'
