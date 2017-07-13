@@ -6,7 +6,7 @@ MAINTAINER Adelaide Rhodes <adelaide.rhodes@gmail.com>
 
 # Install OpenJDK 7 JRE
 RUN apt-get update && apt-get install --yes \
-    openjdk-8-jre \
+    default-jre \
     perl \
     unzip \
     perl-doc
