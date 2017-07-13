@@ -32,8 +32,12 @@ inputs:
       position: 2
       prefix: --threads
 
-outputs:
-type: File
+report_files:
+    type:
+      type: array
+      items: File
     outputBinding:
-      glob: '*.html'
+      # should be put in the working directory
+       glob: "*.html"
+    doc: "HTML reports with embedded graphs"
       
