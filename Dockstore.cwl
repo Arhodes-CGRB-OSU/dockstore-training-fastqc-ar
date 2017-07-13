@@ -27,9 +27,9 @@ inputs:
     inputBinding:
       position: 1
 
-baseCommand: [ fastqc, "--outdir", . , "--extract" ]
+#baseCommand: [ fastqc, "--outdir", . , "--extract" ]
 
-outputs:
+#outputs:
 #  zippedFile:
 #    type: File
 #    outputBinding:
@@ -39,9 +39,9 @@ outputs:
 #    outputBinding:
 #      glob: ".html"
 
-#baseCommand: [ fastqc, "--outdir", .]
+baseCommand: [ fastqc, "--outdir", .]
 
-#outputs:
+outputs:
 #  zipped_files:
 #    type:
 #      type: array
@@ -54,8 +54,8 @@ outputs:
 
   report_files:
     type:
-      type: array
-      items: File
+      type: File
+#      items: File
     outputBinding:
 #      # should be put in the working directory
        glob: "*.html"
