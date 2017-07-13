@@ -34,10 +34,10 @@ outputs:
 #    type: File
 #    outputBinding:
 #      glob: "*.zip"
-  report:
-    type: File
-    outputBinding:
-      glob: ".html"
+#  report:
+#    type: File
+#    outputBinding:
+#      glob: ".html"
 
 #baseCommand: [ fastqc, "--outdir", .]
 
@@ -52,11 +52,11 @@ outputs:
 #    doc: "Individual graph files and additional data files
 #containing the raw data from which plots were drawn."
 
-#  report_files:
-#    type:
-#      type: array
-#      items: File
-#    outputBinding:
+  report_files:
+    type:
+      type: array
+      items: File
+    outputBinding:
 #      # should be put in the working directory
-#       glob: "*.html"
+       glob: "*.html"
 #    doc: "HTML reports with embedded graphs"
