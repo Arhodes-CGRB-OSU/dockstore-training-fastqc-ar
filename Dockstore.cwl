@@ -19,7 +19,8 @@ hints:
     ramMin: 2048
 
 inputs:
-   type:
+  fastq_file:
+    type:
       type: array
       items: File
     inputBinding:
