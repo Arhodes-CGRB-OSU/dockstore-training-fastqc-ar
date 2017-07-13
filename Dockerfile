@@ -4,31 +4,20 @@ FROM ubuntu:16.04
 # File Author / Maintainer
 MAINTAINER Adelaide Rhodes <adelaide.rhodes@gmail.com>
 
-# Install OpenJDK JRE
+# Install OpenJDK 7 JRE
 RUN apt-get update && apt-get install --yes \
-    openjdk-8-jre \
-    unzip \
-    curl \
+    openjdk-7-jre \
     perl \
-    python
+    unzip
 
-ENV FASTQC_PATH http://www.bioinformatics.babraham.ac.uk/projects/fastqc
-ENV FASTQC_ZIP fastqc_v0.11.5.zip
-ENV FASTQC_DEST /usr/local
+# Download FastQC
+ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/
 
-RUN curl -SL ${FASTQC_PATH}/${FASTQC_ZIP} -o /tmp/${FASTQC_ZIP} \
-    && unzip /tmp/${FASTQC_ZIP} -d ${FASTQC_DEST} \
-    && chmod 755 ${FASTQC_DEST}/FastQC/fastqc \
-    && ln -s ${FASTQC_DEST}/FastQC/fastqc /usr/local/bin/fastqc \
-    && rm -rf /tmp/${FASTQC_ZIP}
+# Install FastQC
+RUN cd /usr/local && \
+    unzip /tmp/fastqc_*.zip && \
+    chmod 755 /usr/local/FastQC/fastqc && \
+    ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc && \
+    rm -rf /tmp/fastqc_*.zip
 
-#COPY run-fastqc /usr/local/bin
-#RUN chmod a+x /usr/local/bin/fastqc
-
-# switch back to the ubuntu user so this tool (and the files written) are not owned by root
-RUN groupadd -r -g 1000 ubuntu && useradd -r -g ubuntu -u 1000 -m ubuntu
-USER ubuntu
-
-# by default /bin/bash is executed
-CMD ["/bin/bash"]
-
+ENTRYPOINT ["fastqc"]
