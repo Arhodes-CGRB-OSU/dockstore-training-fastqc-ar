@@ -34,7 +34,7 @@ inputs:
 
 baseCommand: [ fastqc, "--outdir", .]
 
-report_files:
+outputs:
     type:
       type: array
       items: File
