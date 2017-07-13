@@ -20,19 +20,15 @@ hints:
 
 inputs:
   fastq_file:
-    type:
-      type: array
-      items: File
-    inputBinding:
+    type: File
+      inputBinding:
       position: 1
       
 baseCommand: [ fastqc, "--outdir", .]
 
 outputs:
   report_files:
-    type:
-      type: array
-      items: File
+    type: File
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
