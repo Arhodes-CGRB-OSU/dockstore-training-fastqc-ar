@@ -30,14 +30,14 @@ inputs:
 baseCommand: [ fastqc, "--outdir", . , "--extract" ]
 
 outputs:
-  zippedFile:
+#  zippedFile:
+#    type: File
+#    outputBinding:
+#      glob: "*.zip"
+  report:
     type: File
     outputBinding:
-      glob: "*.zip"
-  report:
-    type: Directory
-    outputBinding:
-      glob: "."
+      glob: ".html"
 
 #baseCommand: [ fastqc, "--outdir", .]
 
