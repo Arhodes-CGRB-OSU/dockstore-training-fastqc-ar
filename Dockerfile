@@ -20,4 +20,6 @@ RUN cd /usr/local && \
     ln -s /usr/local/FastQC/fastqc /usr/local/bin/fastqc && \
     rm -rf /tmp/fastqc_*.zip
 
-ENTRYPOINT ["fastqc"]
+#ENTRYPOINT ["fastqc"]
+
+ENTRYPOINT ["/bin/bash"]
