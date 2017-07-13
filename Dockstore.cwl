@@ -12,32 +12,6 @@ cwlVersion: v1.0
 requirements:
   - class: DockerRequirement
     dockerPull: "quay.io/arhodes_cgrb_osu/dockstore-training-fastqc-ar:latest" 
-
-hints:
-  - class: ResourceRequirement
-    coresMin: 1
-    ramMin: 4092
-    outdirMin: 512000
-    
-inputs:
-  fastq_file:
-    type:
-      type: array
-      items: File
-    inputBinding:
-      position: 1
-
-baseCommand: [ fastqc, "--outdir", . , "--extract" ]
-
-outputs:
-  zippedFile:
-    type: File
-    outputBinding:
-      glob: "*.zip"
-  report:
-    type: Directory
-    outputBinding:
-      glob: "."
       
 hints:
   - class: ResourceRequirement
