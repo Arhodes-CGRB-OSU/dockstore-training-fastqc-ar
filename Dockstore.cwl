@@ -39,36 +39,26 @@ outputs:
     outputBinding:
       glob: "."
       
-#baseCommand: [ fastqc, "--outdir", . , "--extract" ]
+hints:
+  - class: ResourceRequirement
+    coresMin: 1
+    ramMin: 1000
 
-#outputs:
-#  zippedFile:
-#    type: File
-#    outputBinding:
-#      glob: "*.zip"
-#  report:
-#    type: File
-#    outputBinding:
-#      glob: ".html"
+inputs:
+  fastq:
+    type: File
+    doc: "Fastq file to be analyzed"
+    inputBinding:
+      position: 1
 
-#baseCommand: [ fastqc, "--outdir", .]
+outputs:
+  zippedFile:
+    type: File
+    outputBinding:
+      glob: '*.zip'
+  report:
+    type: Directory
+    outputBinding:
+      glob: .
 
-#outputs:
-#  zipped_files:
-#    type:
-#      type: array
-#      items: File
-#    outputBinding:
-#      # should be put in the working directory
-#       glob: "*.zip"
-#    doc: "Individual graph files and additional data files
-#containing the raw data from which plots were drawn."
-
-#  report_files:
-#    type:
-#      type: File
-#      items: File
-#    outputBinding:
-#      # should be put in the working directory
-#       glob: "."
-#    doc: "HTML reports with embedded graphs"
+baseCommand: ["fastqc", "--outdir", ".", "--extract"]
