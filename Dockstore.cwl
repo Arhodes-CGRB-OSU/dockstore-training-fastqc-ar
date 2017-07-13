@@ -11,7 +11,7 @@ cwlVersion: v1.0
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "purple_goo"  
+    dockerPull: ./purple_goo  
 
 hints:
   - class: ResourceRequirement
