@@ -28,11 +28,11 @@ inputs:
 baseCommand: [ fastqc, "--outdir", .]
 
 outputs:
-   type:
+  report_files:
+    type:
       type: array
       items: File
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
     doc: "HTML reports with embedded graphs"
-      
