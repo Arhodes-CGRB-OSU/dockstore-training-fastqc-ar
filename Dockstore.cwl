@@ -35,4 +35,3 @@ outputs:
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
-    doc: "HTML reports with embedded graphs"
