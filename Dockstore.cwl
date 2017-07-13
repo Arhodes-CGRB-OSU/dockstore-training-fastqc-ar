@@ -4,10 +4,10 @@ label: "Fastqc v0.11.4"
 
 cwlVersion: v1.0
 
-dct:creator:
-  "@id": "http://orcid.org/0000-0003-0342-8531"
-  foaf:name: Adelaide Rhodes
-  foaf:mbox: "mailto:adelaide.rhodes@gmail.com"
+#dct:creator:
+#  "@id": "http://orcid.org/0000-0003-0342-8531"
+#  foaf:name: Adelaide Rhodes
+#  foaf:mbox: "mailto:adelaide.rhodes@gmail.com"
 
 requirements:
   - class: DockerRequirement
