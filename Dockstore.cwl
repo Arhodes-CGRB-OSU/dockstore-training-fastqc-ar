@@ -58,5 +58,5 @@ outputs:
 #      items: File
     outputBinding:
 #      # should be put in the working directory
-       glob: "*.html"
+       glob: "."
 #    doc: "HTML reports with embedded graphs"
