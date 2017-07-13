@@ -8,7 +8,8 @@ MAINTAINER Adelaide Rhodes <adelaide.rhodes@gmail.com>
 RUN apt-get update && apt-get install --yes \
     openjdk-8-jre \
     perl \
-    unzip
+    unzip \
+    perl-doc
 
 # Download FastQC
 ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/
