@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install --yes \
 #    docker
 
 # Download FastQC
-ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/
+ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.4.zip /tmp/
 
 # Install FastQC
 RUN cd /usr/local && \
