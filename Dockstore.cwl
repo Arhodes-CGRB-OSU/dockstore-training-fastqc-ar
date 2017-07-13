@@ -11,7 +11,7 @@ dct:creator:
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "purple_goo:latest"
+    dockerPull: "quay.io/repository/arhodes_cgrb_osu/dockstore-training-fastqc-ar"
 
 hints:
   - class: ResourceRequirement
