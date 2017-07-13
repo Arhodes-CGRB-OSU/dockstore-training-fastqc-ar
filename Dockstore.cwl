@@ -11,7 +11,7 @@ cwlVersion: v1.0
 
 requirements:
   - class: DockerRequirement
-    dockerPull: quay.io/repository/arhodes_cgrb_osu/dockstore-training-fastqc-ar
+    dockerPull: "quay.io/repository/arhodes_cgrb_osu/dockstore-training-fastqc-ar"
 
 hints:
   - class: ResourceRequirement
