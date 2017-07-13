@@ -27,24 +27,36 @@ inputs:
     inputBinding:
       position: 1
 
-baseCommand: [ fastqc, "--outdir", .]
+baseCommand: [ fastqc, "--outdir", . , "--extract" ]
 
 outputs:
-  zipped_files:
-    type:
-      type: array
-      items: File
+  zippedFile:
+    type: File
     outputBinding:
-      # should be put in the working directory
-       glob: "*.zip"
-    doc: "Individual graph files and additional data files
-containing the raw data from which plots were drawn."
+      glob: "*.zip"
+  report:
+    type: Directory
+    outputBinding:
+      glob: "."
 
-  report_files:
-    type:
-      type: array
-      items: File
-    outputBinding:
-      # should be put in the working directory
-       glob: "*.html"
-    doc: "HTML reports with embedded graphs"
+#baseCommand: [ fastqc, "--outdir", .]
+
+#outputs:
+#  zipped_files:
+#    type:
+#      type: array
+#      items: File
+#    outputBinding:
+#      # should be put in the working directory
+#       glob: "*.zip"
+#    doc: "Individual graph files and additional data files
+#containing the raw data from which plots were drawn."
+
+#  report_files:
+#    type:
+#      type: array
+#      items: File
+#    outputBinding:
+#      # should be put in the working directory
+#       glob: "*.html"
+#    doc: "HTML reports with embedded graphs"
