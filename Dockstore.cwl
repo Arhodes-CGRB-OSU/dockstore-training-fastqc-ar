@@ -6,7 +6,6 @@ cwlVersion: v1.0
 
 dct:creator:
   id: "http://orcid.org/0000-0003-0342-8531"
-  class: foaf:Person
   foaf:name: Adelaide Rhodes
   foaf:mbox: "mailto:adelaide.rhodes@gmail.com"
 
