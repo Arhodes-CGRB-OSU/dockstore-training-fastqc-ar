@@ -33,7 +33,7 @@ inputs:
       prefix: --threads
 
 outputs:
-  htmlFile:
-    type: File
+type: File
     outputBinding:
       glob: '*.html'
+      
