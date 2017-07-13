@@ -19,22 +19,18 @@ hints:
     ramMin: 2048
 
 inputs:
-  fastq:
-    type: File
-    doc: "Fastq file to be analyzed"
+   type:
+      type: array
+      items: File
     inputBinding:
       position: 1
-  threads:
-    type: int
-    doc: "Number of threads"
-    inputBinding:
-      position: 2
-      prefix: --threads
-
+      
 baseCommand: [ fastqc, "--outdir", .]
 
 outputs:
-    type: File
+   type:
+      type: array
+      items: File
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
