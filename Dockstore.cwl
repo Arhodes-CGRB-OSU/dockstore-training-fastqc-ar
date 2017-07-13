@@ -32,6 +32,8 @@ inputs:
       position: 2
       prefix: --threads
 
+baseCommand: [ fastqc, "--outdir", .]
+
 report_files:
     type:
       type: array
