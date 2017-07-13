@@ -36,3 +36,4 @@ outputs:
     outputBinding:
       # should be put in the working directory
        glob: "*.html"
+
