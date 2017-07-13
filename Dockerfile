@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install --yes \
     default-jre \
     perl \
     unzip \
-    perl-doc
+    perl-doc \
+    docker
 
 # Download FastQC
 ADD http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip /tmp/
