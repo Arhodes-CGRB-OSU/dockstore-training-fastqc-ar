@@ -1,6 +1,5 @@
 class: CommandLineTool
-doc: Fastqc training docker
-id: Fastqc-docker-ar-v1.1.1
+id: "fastqc"
 label: "Fastqc v0.11.4"
 
 cwlVersion: v1.0
